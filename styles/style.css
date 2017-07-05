@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.navbar > .navbar-list {
+    float: right;
+}
+
+.navbar > .navbar-list > .navbar-item {
+    display: inline-block;
+}
+
+.navbar > .navbar-list > .navbar-item a {
+    text-decoration: none;
+    padding: 16px;
+    color: royalblue;
+}
+
+.header > .header-img {
+    background-image: url(../images/consuegra.jpg);
+    background-repeat: none;
+    background-size: cover; 
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+}
