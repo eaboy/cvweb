@@ -26,6 +26,8 @@ body {
 
 .navbar > .navbar-list {
     float: right;
+    font-size: 1.3em;
+    line-height: 1.3em;
 }
 
 .navbar > .navbar-list > .navbar-item {
@@ -36,6 +38,11 @@ body {
     text-decoration: none;
     padding: 16px;
     color: royalblue;
+    text-shadow: 1px 1px darkblue;
+}
+
+.navbar > .navbar-list > .navbar-item a:hover {
+    animation: menuItemAnimation 1s forwards;
 }
 
 .header > .header-img {
@@ -54,4 +61,10 @@ body {
     width: 100%;
     text-align: center;
     font-size: 3em;
+}
+
+@keyframes menuItemAnimation {
+    100% {
+        font-size: 1.32em;
+    }
 }
