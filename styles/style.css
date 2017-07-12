@@ -2,7 +2,7 @@
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Jura', sans-serif;
 }
 
 body {
@@ -26,8 +26,8 @@ body {
 
 .navbar > .navbar-list {
     float: right;
-    font-size: 1.3em;
-    line-height: 1.3em;
+    font-size: 1.25em;
+    line-height: 2em;
 }
 
 .navbar > .navbar-list > .navbar-item {
@@ -37,16 +37,33 @@ body {
 .navbar > .navbar-list > .navbar-item a {
     text-decoration: none;
     padding: 16px;
-    color: royalblue;
-    text-shadow: 1px 1px darkblue;
+    color: white;
+    display: block;
 }
 
 .navbar > .navbar-list > .navbar-item a:hover {
-    animation: menuItemAnimation 1s forwards;
+    font-weight: bold;
+}
+
+.navbar > .navbar-list > .navbar-item a > .underline-hover {
+    border-bottom: 2px solid royalblue;
+    margin-bottom: -1.9em;
+    width: 0%;
+}
+
+.navbar > .navbar-list > .navbar-item.active a > .underline-hover {
+    width: 100%;
+}
+
+.navbar > .navbar-list > .navbar-item a:hover > .underline-hover {
+    width: 100%;
+    transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    -webkit-transition: width 0.3s;
 }
 
 .header > .header-img {
-    background-image: url(../images/consuegra.jpg);
+    background-image: url(../images/consuegra-bn.jpg);
     background-repeat: none;
     background-size: cover; 
     background-position: center center;
@@ -61,10 +78,18 @@ body {
     width: 100%;
     text-align: center;
     font-size: 3em;
+    text-transform: uppercase;
+}
+
+.title-background {
+    background-color: rgba(65, 105, 225, 0.6);
+    width: auto;
+    margin: 0 20%;
+    box-shadow: 8px 8px rgba(255, 65, 105, 0.6);
 }
 
 @keyframes menuItemAnimation {
     100% {
-        font-size: 1.32em;
+        font-weight: bold;
     }
 }
