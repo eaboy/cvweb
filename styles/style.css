@@ -88,8 +88,43 @@ body {
     box-shadow: 8px 8px rgba(255, 65, 105, 0.6);
 }
 
-@keyframes menuItemAnimation {
+.section-container {
+    padding: 25px 0;
+}
+
+.who-i-am > .photo {
+    float: left;
+    position: relative;
+    display: grid;
+}
+
+.who-i-am > .photo > .name {
+    position: absolute;
+    width: 250px;
+    border-radius: 10%;
+    height: 100%;
+    background-color: rgba(65, 105, 225, 0.6);
+    bottom: 0;
+}
+
+.who-i-am > .photo img {
+    max-width: 250px;
+    animation: imageAnimation 2s 0.5s forwards;
+}
+
+.who-i-am > .text {
+    float: right;
+}
+
+@keyframes imageAnimation {
+    0% {
+        border-radius: 10%;
+    }
+    50% {
+        border-radius: 30%;
+        transform: scale(1.05);
+    }
     100% {
-        font-weight: bold;
+        border-radius: 10%;
     }
 }
