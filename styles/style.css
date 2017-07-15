@@ -28,6 +28,12 @@ body {
     float: right;
     font-size: 1.25em;
     line-height: 2em;
+    transition: margin-top 0.7s, background-color 0.7s;
+}
+
+.navbar > .navbar-list.scrolled {
+    margin-top: 0;
+    background-color: rgba(0,0,0,0.75);
 }
 
 .navbar > .navbar-list > .navbar-item {
@@ -85,7 +91,7 @@ body {
 .header > .title span{
     text-transform: none;
     color: rgb(255, 65, 105);
-    font-size: 0.7em;
+    font-size: 0.4em;
 }
 
 .title-background {
@@ -99,12 +105,12 @@ body {
     padding: 25px 0;
 }
 
-.who-i-am > .photo {
+.who-i-am > article > .photo {
     float: left;
     position: relative;
 }
 
-.who-i-am > .photo > .name {
+.who-i-am > article > .photo > .name {
     position: absolute;
     width: 250px;
     height: 0%;
@@ -112,27 +118,27 @@ body {
     bottom: 0;
 }
 
-.who-i-am > .photo > .name p {
+.who-i-am > article > .photo > .name p {
     text-align: center;
     color: white;
     font-weight: bold;
     font-size: 1.3em;
 }
 
-.who-i-am > .photo img {
+.who-i-am > article > .photo img {
     max-width: 250px;
     border-radius: 100%;
 }
 
-.who-i-am > .photo img.animate {
+.who-i-am > article > .photo img.animate {
     animation: imageAnimation 2s 0.5s forwards;
 }
 
-.who-i-am > .photo img:hover + .name  {
+.who-i-am > article > .photo img:hover + .name  {
     animation: photoHoverAnimation 1s forwards;
 }
 
-.who-i-am > .text {
+.who-i-am > article > .text {
     float: right;
 }
 
