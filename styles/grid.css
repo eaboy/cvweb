@@ -71,3 +71,8 @@
    width: 100%; 
    float: left;
 }
+
+.row-flex {
+    display: flex;
+    flex-flow: row wrap;
+}

@@ -105,41 +105,63 @@ body {
     padding: 25px 0;
 }
 
+.section-reverse {
+    background-color: rgba(65, 105, 225, 0.6);
+    color: whitesmoke;
+    margin-left: calc(-50vw + 50% );
+    margin-right: calc(-50vw + 50% );
+}
+
 .who-i-am > article > .photo {
     float: left;
     position: relative;
 }
 
-.who-i-am > article > .photo > .name {
+.who-i-am > article > .photo > figure > .name {
     position: absolute;
     width: 250px;
     height: 0%;
     background-color: rgba(65, 105, 225, 0.6);
     bottom: 0;
+    -webkit-margin-after: 1em;
 }
 
-.who-i-am > article > .photo > .name p {
+.who-i-am > article > .photo > figure > .name p {
     text-align: center;
-    color: white;
+    color: whitesmoke;
     font-weight: bold;
     font-size: 1.3em;
+    visibility: hidden;
+    transition: visivility 0 linear 1s;
 }
 
-.who-i-am > article > .photo img {
+.who-i-am > article > .photo > figure > img {
     max-width: 250px;
     border-radius: 100%;
 }
 
-.who-i-am > article > .photo img.animate {
+.who-i-am > article > .photo > figure > img.animate {
     animation: imageAnimation 2s 0.5s forwards;
 }
 
-.who-i-am > article > .photo img:hover + .name  {
+.who-i-am > article > .photo > figure > img:hover + .name, .who-i-am > article > .photo > figure > img + .name:hover  {
     animation: photoHoverAnimation 1s forwards;
+}
+
+.who-i-am > article > .photo > figure > img:hover + .name p, .who-i-am > article > .photo > figure > img + .name:hover p  {
+    visibility: visible;
 }
 
 .who-i-am > article > .text {
     float: right;
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
 }
 
 @keyframes imageAnimation {

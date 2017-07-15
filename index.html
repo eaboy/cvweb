@@ -35,15 +35,20 @@
     <main class="container">
         <section id="who-i-am" class="section-container clearfix who-i-am row">
             <article>
-                <div class="photo col-6"><img src="./images/foto2.jpg" alt="Eduardo Aboy"><div class="name"><p>Eduardo Aboy</p></div></div>
+                <div class="photo col-6">
+                    <figure>
+                        <img src="./images/foto2.jpg" alt="Eduardo Aboy">
+                        <div class="name"><p>Eduardo Aboy</p></div>
+                    </figure>
+                </div>
                 <div class="text col-6">
                     <h2>Quién soy</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati possimus temporibus excepturi, voluptatum sint dignissimos repudiandae autem cupiditate maiores magni pariatur, sunt quos rerum modi accusantium fugiat ducimus debitis deleniti!</p>
                 </div>
             </article>
         </section>
-        <section id="studies" class="section-container">
-            <article>
+        <section id="studies" class="section-container section-reverse row-flex">
+            <article class="flex-center">
                 <header>
                     <h2><i class="fa fa-graduation-cap" aria-hidden="true"></i> Formación</h2>
                 </header>
@@ -72,8 +77,45 @@
                 </header>
             </article>
         </section>
-        <section id="experience" class="section-container"></section>
-        <section id="about-me" class="section-container"></section>
+        <section id="experience" class="section-container">
+            <header>
+                    <h2><i class="fa fa-briefcase" aria-hidden="true"></i> Experiencia</h2>
+                </header>
+                    <ul>
+                        <li>
+                            <h2>Sinteac, Autónomo - 2006 <i class="fa fa-long-arrow-right" aria-hidden="true"></i> Actualmente</h2>
+                            <em>Servicios informáticos para empresas y particulares</em>
+                            <p>Desarrollo labores como reparación de equipos informáticos,
+                            mantenimiento, administración e instalación de sistemas
+                            operativos, implantación de sistemas de gestión, configuración y
+                            adaptación de software, implantación de sisteams de seguridad,
+                            backups, desarrollo de sitios web, programación a medida, etc.</p>
+                        </li>
+                        <li>
+                            <h2>Desarrollo de Sistemas Globales, S.L. - 2004 <i class="fa fa-long-arrow-right" aria-hidden="true"></i> 2006</h2>
+                            <em>Técnico informático</em>
+                            <p>Funciones de técnico de campo para diferentes empresas:
+                            Sermicro, Metrolico, BT, Telefónica, Wanadoo, France Telecom,
+                            etc. Realización de trabajos en cliente: instalación de ADSL,
+                            resolución de incidencias ADSL, reparación de equipos hardware
+                            y sistemas, instalación y mantenimiento de equipos de
+                            telecomunicaciones, VoIP, etc.</p>
+                        </li>
+                    </ul>
+                </header>
+            </article>
+        </section>
+        <section id="about-me" class="section-container section-reverse">
+            <article class="row-flex">
+                <h2>Sobre mí</h2>
+                <div class="video">
+                    <video id="video" controls width="550" height="300">
+                        <source src="./video/batman.mp4" type="video/mp4"> 
+                    </video>
+                </div>
+                <div class="about-me-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam excepturi cumque laboriosam, explicabo voluptatibus nisi quaerat reiciendis nesciunt nemo ullam, quasi aut quia quis consequatur provident itaque dolor repellendus?</div>
+            </article>
+        </section>
         <section id="contact" class="section-container"></section>
     </main>
 </body>
