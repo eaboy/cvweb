@@ -63,7 +63,7 @@ body {
 }
 
 .header > .header-img {
-    background-image: url(../images/consuegra-bn.jpg);
+    background-image: url(../images/header.jpg);
     background-repeat: none;
     background-size: cover; 
     background-position: center center;
@@ -79,13 +79,20 @@ body {
     text-align: center;
     font-size: 3em;
     text-transform: uppercase;
+    color: white;
+}
+
+.header > .title span{
+    text-transform: none;
+    color: rgb(255, 65, 105);
+    font-size: 0.7em;
 }
 
 .title-background {
-    background-color: rgba(65, 105, 225, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     width: auto;
     margin: 0 20%;
-    box-shadow: 8px 8px rgba(255, 65, 105, 0.6);
+    box-shadow: 8px 8px rgba(65, 105, 225, 0.6);
 }
 
 .section-container {
@@ -95,21 +102,34 @@ body {
 .who-i-am > .photo {
     float: left;
     position: relative;
-    display: grid;
 }
 
 .who-i-am > .photo > .name {
     position: absolute;
     width: 250px;
-    border-radius: 10%;
-    height: 100%;
+    height: 0%;
     background-color: rgba(65, 105, 225, 0.6);
     bottom: 0;
 }
 
+.who-i-am > .photo > .name p {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
 .who-i-am > .photo img {
     max-width: 250px;
+    border-radius: 100%;
+}
+
+.who-i-am > .photo img.animate {
     animation: imageAnimation 2s 0.5s forwards;
+}
+
+.who-i-am > .photo img:hover + .name  {
+    animation: photoHoverAnimation 1s forwards;
 }
 
 .who-i-am > .text {
@@ -118,13 +138,22 @@ body {
 
 @keyframes imageAnimation {
     0% {
-        border-radius: 10%;
+        border-radius: 100%;
     }
     50% {
-        border-radius: 30%;
+        border-radius: 50%;
         transform: scale(1.05);
     }
     100% {
-        border-radius: 10%;
+        border-radius: 0%;
+    }
+}
+
+@keyframes photoHoverAnimation {
+    66% {
+        height: 30%;
+    }
+    100% {
+        height: 25%;
     }
 }
