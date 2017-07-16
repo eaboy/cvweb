@@ -129,7 +129,8 @@ function createComment(comment, stars) {
         div.appendChild(document.createTextNode('Valoración: '));
         for (var i = 0; i < parseInt(stars); i++) {
             var icon = document.createElement('i');
-            icon.classList.add('fa','fa-star');
+            icon.classList.add('fa');
+            icon.classList.add('fa-star');
             div.appendChild(icon);
         }
         li.appendChild(div);
