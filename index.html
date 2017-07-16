@@ -175,19 +175,28 @@
                 <div class="col-6">
                     <h3>Añade un comentario y una valoración de la web</h3>
                     <form>
-                        <textarea id="newComment" name="newComment" placeholder="Comentario..." rows="3" required>
+                        <label for="newComment">Tu comentario:</label>
+                        <textarea id="newComment" name="newComment" placeholder="Comentario..." rows="3" required></textarea>
                         <br>
-                        <div></div>
+                        <div id="stars">
+                            <label for="stars">Valoración:</label>
+                            <i class="fa fa-star-o stars" aria-hidden="true"></i>
+                            <i class="fa fa-star-o stars" aria-hidden="true"></i>
+                            <i class="fa fa-star-o stars" aria-hidden="true"></i>
+                            <i class="fa fa-star-o stars" aria-hidden="true"></i>
+                            <i class="fa fa-star-o stars" aria-hidden="true"></i>
+                        </div>
                         <br>
-                        <button id="sendNewTask">Enviar</button>
+                        <button id="addNewComment" class="col-3">Guardar</button>
+                        <p class="col-9 alert" id="alert-new-comment">Tienes que escribir un comentario y dar una valoración.</p>
                     </form>
                 </div>
 
                 <div class="col-6">
-                    <h3>Tareas pendientes</h3>
+                    <h3>Comentarios</h3>
                     <div class="loader"></div>
                     <div>
-                        <ul id="taskContainer">
+                        <ul id="commentsContainer">
                         </ul>
                     </div>
                 </div>  
@@ -200,5 +209,6 @@
 
     <script src="./js/menu.js"></script>
     <script src="./js/form.js"></script>
+    <script src="./js/comments.js"></script>
 
 </html>

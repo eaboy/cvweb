@@ -235,6 +235,28 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+#stars > input[type="radio"] {
+    display: none;
+} 
+
+#stars > i {
+    font-size: 1.5em;
+    margin-left: 10px;
+}
+
+#stars > i.hover {
+    display: none;
+}
+
+.alert {
+    color: red;
+    visibility: hidden;
+}
+
+.alert.show {
+    visibility: visible;
+}
+
 @keyframes imageAnimation {
     0% {
         border-radius: 100%;
