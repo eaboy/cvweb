@@ -130,17 +130,17 @@
                         <div class="form">
                             <form name="contacto" method="get" novalidate>
                                 <div class="form-row clearfix">
-                                    <label for="nombre" class="col-3">Nombre:</label>
+                                    <label for="nombre" class="col-3">Nombre*:</label>
                                     <input id="nombre" type="text" name="nombre" placeholder="Nombre" class="col-9" required>
                                     
                                 </div>
                                 <div class="form-row clearfix">
-                                    <label for="email" class="col-3">Email:</label>
+                                    <label for="email" class="col-3">Email*:</label>
                                     <input type="email" name="email" id="email" placeholder="name@company.com" class="col-9" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required>
                                 </div>
                                 <div class="form-row clearfix">
                                     <label for="phone" class="col-3">Teléfono:</label>
-                                    <input type="number" name="phone" id="phone" placeholder="Número de tel." minlength="8" maxlength="10" class="col-9">
+                                    <input type="number" name="phone" id="phone" placeholder="Número de tel." min="600000000" maxlength="999999999" class="col-9">
                                 </div>
                                 <div class="form-row clearfix">
                                     <label for="message" class="col-3">Mensaje:</label>
@@ -158,8 +158,10 @@
                                     <input type="radio" id="know-me-3" name="know-me" value="Contacto" required>
                                     <label for="know-me-4">Otros</label>
                                     <input type="radio" id="know-me-4" name="know-me" value="Otros" required>
-                                    <label for="others" class="others">¿Dónde?</label>
-                                    <input type="text" id="others" name="others" class="others">
+                                </div>
+                                <div class="others" id="others-input">
+                                    <label for="others">¿Dónde?</label>
+                                    <input type="text" id="others" name="others">
                                 </div>
                                 
                                 <div class="form-row clearfix">
