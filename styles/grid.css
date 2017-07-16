@@ -84,3 +84,7 @@
     padding: 0 25px;
     justify-content: space-around;
 }
+
+.form-row {
+    margin: 5px 0;
+}

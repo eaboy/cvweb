@@ -119,31 +119,36 @@
             </article>
         </section>
         <section id="contact" class="section-container clearfix">
-            <h2>Contacta <span class="undeline">conmigo</span></h2>
+            <h2>Contacta <span class="underline">conmigo</span></h2>
                 <div>
-                    <div class="col-6"></div>
+                    <div class="col-6">
+                        <p class="col-2"><i class="fa fa-mobile" aria-hidden="true"></i> <span class="bold underline">Tel</span></p><p class="col-2"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></p><p class="col-8"> 651 550 784</p> 
+                        <p class="col-2"><i class="fa fa-envelope" aria-hidden="true"></i> <span class="bold underline">Email</span></p><p class="col-2"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></p><p class="col-8"> e.aboy@sinteac.es</p> 
+                        <p class="col-2"><i class="fa fa-home" aria-hidden="true"></i> <span class="bold underline">Dir</span></p><p class="col-2"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></p><p class="col-8"> Avda. Alcázar de San Juan<br>Consuegr - 45700 Toledo</p> 
+                    </div>
                     <div class="col-6">
                         <div class="form">
                             <form name="contacto" method="get" novalidate>
-                                <div class="form-row">
-                                    <label for="nombre">Nombre:</label>
-                                    <input id="nombre" type="text" name="nombre" placeholder="Nombre" required>
+                                <div class="form-row clearfix">
+                                    <label for="nombre" class="col-3">Nombre:</label>
+                                    <input id="nombre" type="text" name="nombre" placeholder="Nombre" class="col-9" required>
                                     
                                 </div>
-                                <div class="form-row">
-                                    <label for="email">Email:</label>
-                                    <input type="email" name="email" id="email" placeholder="name@company.com" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required>
+                                <div class="form-row clearfix">
+                                    <label for="email" class="col-3">Email:</label>
+                                    <input type="email" name="email" id="email" placeholder="name@company.com" class="col-9" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required>
                                 </div>
-                                <div class="form-row">
-                                    <label for="phone">Teléfono:</label>
-                                    <input type="number" name="phone" id="phone" placeholder="Número de tel." minlength="8" maxlength="10">
+                                <div class="form-row clearfix">
+                                    <label for="phone" class="col-3">Teléfono:</label>
+                                    <input type="number" name="phone" id="phone" placeholder="Número de tel." minlength="8" maxlength="10" class="col-9">
                                 </div>
-                                <div class="form-row">
-                                    <label for="message">Mensaje:</label>
-                                    <textarea name="message" id="message" placeholder="Mensaje" rows="3" >
+                                <div class="form-row clearfix">
+                                    <label for="message" class="col-3">Mensaje:</label>
+                                    <textarea name="message" id="message" placeholder="Mensaje" rows="3" class="col-6"></textarea>
+                                    <small class="col-3">Máximo 150 palabras. Hasta ahora <span id="words">0</span></small>
                                 </div>
 
-                                <div class="form-row">
+                                <div class="form-row clearfix">
                                     <div>¿Cómo me has conocido?</div>
                                     <label for="know-me-1">Buscador de internet</label>
                                     <input type="radio" id="know-me-1" name="know-me" value="Buscador" required>
@@ -151,14 +156,13 @@
                                     <input type="radio" id="know-me-2" name="know-me" value="Redes sociales" required>
                                     <label for="know-me-3">Algún contacto</label>
                                     <input type="radio" id="know-me-3" name="know-me" value="Contacto" required>
+                                    <label for="know-me-4">Otros</label>
+                                    <input type="radio" id="know-me-4" name="know-me" value="Otros" required>
+                                    <label for="others" class="others">¿Dónde?</label>
+                                    <input type="text" id="others" name="others" class="others">
                                 </div>
                                 
-                                <div class="form-row">
-                                    <label for="ejercito">Tamaño del ejército:</label>
-                                    <input type="number" id="ejercito" name="ejercito" min="10" required>
-                                </div>
-                                
-                                <div class="form-row">
+                                <div class="form-row clearfix">
                                     <button type="submit" id="enviar">Enviar</button>
                                 </div>
                             </form>
@@ -173,5 +177,6 @@
 </body>
 
     <script src="./js/menu.js"></script>
+    <script src="./js/form.js"></script>
 
 </html>
