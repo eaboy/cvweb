@@ -257,6 +257,17 @@ input[type="number"] {
     visibility: visible;
 }
 
+#comments-container > li {
+    list-style-type: none;
+    padding-bottom: 5px;
+    border-bottom: 1px solid;
+    margin-bottom: 10px;
+}
+
+#comments-container > li  i {
+    color: goldenrod;
+}
+
 @keyframes imageAnimation {
     0% {
         border-radius: 100%;
