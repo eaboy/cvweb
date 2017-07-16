@@ -108,8 +108,8 @@
         <section id="about-me" class="section-container section-reverse">
             <article class="row-flex-nowrap">
                 <div class="video">
-                    <video id="video" controls width="550" height="300">
-                        <source src="./video/batman.mp4" type="video/mp4"> 
+                    <video id="video" controls width="550" height="309">
+                        <source src="./video/coding.mp4" type="video/mp4"> 
                     </video>
                 </div>
                 <div class="about-me-text">
@@ -170,7 +170,27 @@
                             </form>
                         </div>
                     </div>
-                </div>            
+                </div>       
+                <h2>Déjanos un comentario</h2>
+                <div class="col-6">
+                    <h3>Añade un comentario y una valoración de la web</h3>
+                    <form>
+                        <textarea id="newComment" name="newComment" placeholder="Comentario..." rows="3" required>
+                        <br>
+                        <div></div>
+                        <br>
+                        <button id="sendNewTask">Enviar</button>
+                    </form>
+                </div>
+
+                <div class="col-6">
+                    <h3>Tareas pendientes</h3>
+                    <div class="loader"></div>
+                    <div>
+                        <ul id="taskContainer">
+                        </ul>
+                    </div>
+                </div>  
         </section>
     </main>
     <footer class="footer">
