@@ -27,8 +27,8 @@
             <li class="navbar-item"><a href="#who-i-am"><div class="underline-hover"></div>Quién soy</a></li>
             <li class="navbar-item"><a href="#studies"><div class="underline-hover"></div>Estudios</a></li>
             <li class="navbar-item"><a href="#experience"><div class="underline-hover"></div>Experiencia</a></li>
-            <li class="navbar-item"><a href="#"><div class="underline-hover"></div>Sobre mí</a></li>
-            <li class="navbar-item"><a href="#"><div class="underline-hover"></div>Contacto</a></li>
+            <li class="navbar-item"><a href="#about-me"><div class="underline-hover"></div>Sobre mí</a></li>
+            <li class="navbar-item"><a href="#contact"><div class="underline-hover"></div>Contacto</a></li>
         </ul>
     </nav>  
 
@@ -106,18 +106,70 @@
             </article>
         </section>
         <section id="about-me" class="section-container section-reverse">
-            <article class="row-flex">
-                <h2>Sobre mí</h2>
+            <article class="row-flex-nowrap">
                 <div class="video">
                     <video id="video" controls width="550" height="300">
                         <source src="./video/batman.mp4" type="video/mp4"> 
                     </video>
                 </div>
-                <div class="about-me-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam excepturi cumque laboriosam, explicabo voluptatibus nisi quaerat reiciendis nesciunt nemo ullam, quasi aut quia quis consequatur provident itaque dolor repellendus?</div>
+                <div class="about-me-text">
+                    <h2>Sobre mí</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam excepturi cumque laboriosam, explicabo voluptatibus nisi quaerat reiciendis nesciunt nemo ullam, quasi aut quia quis consequatur provident itaque dolor repellendus?</p>
+                </div>
             </article>
         </section>
-        <section id="contact" class="section-container"></section>
+        <section id="contact" class="section-container clearfix">
+            <h2>Contacta <span class="undeline">conmigo</span></h2>
+                <div>
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                        <div class="form">
+                            <form name="contacto" method="get" novalidate>
+                                <div class="form-row">
+                                    <label for="nombre">Nombre:</label>
+                                    <input id="nombre" type="text" name="nombre" placeholder="Nombre" required>
+                                    
+                                </div>
+                                <div class="form-row">
+                                    <label for="email">Email:</label>
+                                    <input type="email" name="email" id="email" placeholder="name@company.com" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required>
+                                </div>
+                                <div class="form-row">
+                                    <label for="phone">Teléfono:</label>
+                                    <input type="number" name="phone" id="phone" placeholder="Número de tel." minlength="8" maxlength="10">
+                                </div>
+                                <div class="form-row">
+                                    <label for="message">Mensaje:</label>
+                                    <textarea name="message" id="message" placeholder="Mensaje" rows="3" >
+                                </div>
+
+                                <div class="form-row">
+                                    <div>¿Cómo me has conocido?</div>
+                                    <label for="know-me-1">Buscador de internet</label>
+                                    <input type="radio" id="know-me-1" name="know-me" value="Buscador" required>
+                                    <label for="know-me-2">Redes sociales</label>
+                                    <input type="radio" id="know-me-2" name="know-me" value="Redes sociales" required>
+                                    <label for="know-me-3">Algún contacto</label>
+                                    <input type="radio" id="know-me-3" name="know-me" value="Contacto" required>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <label for="ejercito">Tamaño del ejército:</label>
+                                    <input type="number" id="ejercito" name="ejercito" min="10" required>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <button type="submit" id="enviar">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>            
+        </section>
     </main>
+    <footer class="footer">
+        Eduardo Aboy &copy; 2017 KeepCoding
+    </footer>
 </body>
 
     <script src="./js/menu.js"></script>

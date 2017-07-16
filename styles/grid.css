@@ -76,3 +76,11 @@
     display: flex;
     flex-flow: row wrap;
 }
+
+.row-flex-nowrap {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding: 0 25px;
+    justify-content: space-around;
+}

@@ -24,6 +24,7 @@ function scrollToElement (element) {
         window.scroll(0,window.scrollY - jump);
     }
     if (jump === Math.abs(acumulativeOffset(element) - window.scrollY) * 0.3){ //Ends function when next jump is equal to last, i.e. when the end of the page is reached
+        window.scroll(0, acumulativeOffset(element));
         return;
     }
     if (jump > 1) {
@@ -32,6 +33,7 @@ function scrollToElement (element) {
             scrollToElement(element);
         }, 40)
     } else {
+        console.log(acumulativeOffset(element));
         window.scroll(0, acumulativeOffset(element));
     }
 }
@@ -54,10 +56,11 @@ var acumulativeOffset = function (element) {
     return top;
 }
 
-var offsetWhoIAm = acumulativeOffset(document.getElementById('who-i-am')) - 76;
+var offsetWhoIAm = acumulativeOffset(document.getElementById('who-i-am')) - 56;
 var offsetStudies = acumulativeOffset(document.getElementById('studies')) - 56;
 var offsetExperience = acumulativeOffset(document.getElementById('experience')) - 56;
-/*var nvbar = acumulativeOffset(document.getElementsByClassName('navbar')[0]) - 50;*/
+var offsetAboutMe = acumulativeOffset(document.getElementById('about-me')) - 56;
+var offsetContact = acumulativeOffset(document.getElementById('contact')) - 56;
 
 window.addEventListener('scroll', changeMenuStyle);
 
@@ -74,23 +77,49 @@ function changeMenuStyle(event) {
         deleteActiveClass();
         document.querySelector("a[href$='#header']").parentNode.classList.add('active');
         document.querySelector(".navbar > .navbar-list").classList.remove('scrolled');
-    } else if (pageOffset >= offsetWhoIAm && pageOffset < offsetStudies) {
-        if (!previous || previous !== 2) {
-            previous = 2;
-        } else if (previous === 2) {
-            return false;
-        }
-        deleteActiveClass();
-        document.querySelector("a[href$='#who-i-am']").parentNode.classList.add('active');
-        document.querySelector(".who-i-am > article > .photo img").classList.add('animate');
+    } else { 
         document.querySelector(".navbar > .navbar-list").classList.add('scrolled');
-    } else if (pageOffset >= offsetStudies && pageOffset < offsetExperience) {
-        if (!previous || previous !== 3) {
-            previous = 3;
-        } else if (previous === 3) {
-            return false;
+        if (pageOffset >= offsetWhoIAm && pageOffset < offsetStudies) {
+            if (!previous || previous !== 2) {
+                previous = 2;
+            } else if (previous === 2) {
+                return false;
+            }
+            deleteActiveClass();
+            document.querySelector("a[href$='#who-i-am']").parentNode.classList.add('active');
+            document.querySelector(".who-i-am > article > .photo img").classList.add('animate');
+        } else if (pageOffset >= offsetStudies && pageOffset < offsetExperience) {
+            if (!previous || previous !== 3) {
+                previous = 3;
+            } else if (previous === 3) {
+                return false;
+            }
+            deleteActiveClass();
+            document.querySelector("a[href$='#studies']").parentNode.classList.add('active');
+        } else if (pageOffset >= offsetExperience && pageOffset < offsetAboutMe) {
+            if (!previous || previous !== 4) {
+                previous = 4;
+            } else if (previous === 4) {
+                return false;
+            }
+            deleteActiveClass();
+            document.querySelector("a[href$='#experience']").parentNode.classList.add('active');
+        } else if (pageOffset >= offsetAboutMe && pageOffset < offsetContact) {
+            if (!previous || previous !== 5) {
+                previous = 5;
+            } else if (previous === 5) {
+                return false;
+            }
+            deleteActiveClass();
+            document.querySelector("a[href$='#about-me']").parentNode.classList.add('active');
+        } else {
+            if (!previous || previous !== 6) {
+                previous = 6;
+            } else if (previous === 6) {
+                return false;
+            }
+            deleteActiveClass();
+            document.querySelector("a[href$='#contact']").parentNode.classList.add('active');
         }
-        deleteActiveClass();
-        document.querySelector("a[href$='#studies']").parentNode.classList.add('active');
     }
 }
