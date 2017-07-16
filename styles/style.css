@@ -164,6 +164,10 @@ body {
     flex: 1;
 }
 
+.video,.about-me-text {
+    width: 550px;
+}
+
 .footer {
     background-color: rgb(65, 105, 225);
     color: whitesmoke;
@@ -179,6 +183,10 @@ body {
 
 .bold {
     font-weight: bold;
+}
+
+form > div > small {
+ padding-left: 8px;
 }
 
 
@@ -233,6 +241,10 @@ input[type="number"]::-webkit-inner-spin-button {
 
 input[type="number"] {
     -moz-appearance: textfield;
+}
+
+#stars {
+    margin: 10px 0;
 }
 
 #stars > input[type="radio"] {
